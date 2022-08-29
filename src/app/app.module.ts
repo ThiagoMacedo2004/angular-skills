@@ -11,10 +11,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FakeApiService } from './fake-api.service';
 import { HelloComponent } from './hello.component';
 
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule, MatButtonModule, MatChipsModule, MatCardModule, HttpClientModule, InMemoryWebApiModule.forRoot(FakeApiService, {delay: 5000}) ],
+  imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule, MatButtonModule, MatChipsModule, MatCardModule, HttpClientModule, MatProgressSpinnerModule, InMemoryWebApiModule.forRoot(FakeApiService, {delay: 5000}) ],
   declarations: [ AppComponent, HelloComponent, DashboardComponent, CardComponent ],
   bootstrap:    [ AppComponent ]
 })

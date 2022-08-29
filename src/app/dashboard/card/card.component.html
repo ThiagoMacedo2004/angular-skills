@@ -9,7 +9,7 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>LIKE {{card.likes}}</button>
-    <button mat-button>SHARE</button>
+    <button mat-button [color]="color" (click)="onLike()">LIKE {{card.likes}}</button>
+    <a mat-button href="https://www.linkedin.com/in/thiago-macedo-761002106" target="_blank">SHARE</a>
   </mat-card-actions>
 </mat-card>

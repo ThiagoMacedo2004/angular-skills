@@ -1,2 +1,10 @@
 <!--TODO: melhorar o layout dos cards para exibir ao menos 2 por linha em telas > md, e pequenas (sm) 1 -->
-<app-card [card]="card" *ngFor="let card of cards"></app-card>
+
+<div class="aguarde" *ngIf="!cards">
+    <mat-spinner [diameter]="150"></mat-spinner>
+    <span>Por favor, aguarde enquanto carregamos as informações.</span>
+</div>
+
+<div class="linhas">
+    <app-card [card]="card" *ngFor="let card of cards"></app-card>
+</div>
